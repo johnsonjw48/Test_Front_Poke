@@ -1,0 +1,25 @@
+<div class="container ">
+  <div class="card mt-5 p-5">
+    <h1 class="text-center text-muted"> Liste des Pokemon </h1>
+    <div class="d-flex justify-content-end">
+      <button class="btn btn-outline-primary mt-4">Mes favoris <i class="fas fa-heart"></i> </button>
+    </div>
+    <div class="col-md-6 ms-auto me-auto mt-5">
+      <table class="table table-striped">
+        <thead>
+        <tr>
+          <th scope="col">Nom</th>
+          <th scope="col">Url</th>
+          <th>Action</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let poke of allPoke">
+          <th scope="row">{{poke.name}}</th>
+          <td>{{poke.url}}</td>
+          <td> <button class="btn btn-primary" (click)="onClickPoke(poke.name)">Voir</button> </td>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
